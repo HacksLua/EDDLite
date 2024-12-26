@@ -145,6 +145,7 @@ namespace EDDLite
         public int TranslatorDirectoryIncludeSearchUpDepth { get; private set; }
 
         public string ScanCachePath => null;        // we don't implement scan cache saving
+        public bool ScanCacheEnabled => false;      // we don't implement scan cache saving
 
         public bool SetEDDNforNewCommanders { get; set; } = true;       // we set EDDN on for new commanders
 
