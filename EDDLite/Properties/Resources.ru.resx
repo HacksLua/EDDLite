@@ -148,8 +148,8 @@
   <data name="URLInaraStation" xml:space="preserve">
     <value>https://inara.cz/galaxy-station/?search=</value>
   </data>
-  <data name="Credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Credits.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Credits" xml:space="preserve">
+    <value />
   </data>
   <data name="EDCD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EDCD.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -215,135 +215,135 @@
     <value>https://spansh.co.uk/system/</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Язык</value>
   </data>
   <data name="LanguageChanged" xml:space="preserve">
-    <value>LanguageChanged</value>
+    <value>Язык изменён. Требуется перезапуск.</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Редактировать</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Удалить</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Добавить</value>
   </data>
   <data name="Commander" xml:space="preserve">
-    <value>Commander</value>
+    <value>Командир</value>
   </data>
   <data name="EDSM_Name" xml:space="preserve">
-    <value>EDSM Name</value>
+    <value>Имя в EDSM</value>
   </data>
   <data name="Journal_Folder" xml:space="preserve">
-    <value>Journal Folder</value>
+    <value>Папка журнала</value>
   </data>
   <data name="Notes" xml:space="preserve">
-    <value>Notes</value>
+    <value>Заметки</value>
   </data>
   <data name="System" xml:space="preserve">
-    <value>System</value>
+    <value>Система</value>
   </data>
   <data name="Location" xml:space="preserve">
-    <value>Location</value>
+    <value>Локация</value>
   </data>
   <data name="Cargo" xml:space="preserve">
-    <value>Cargo</value>
+    <value>Груз</value>
   </data>
   <data name="Ship" xml:space="preserve">
-    <value>Ship</value>
+    <value>Корабль</value>
   </data>
   <data name="Missions" xml:space="preserve">
-    <value>Missions</value>
+    <value>Миссии</value>
   </data>
   <data name="Consumables" xml:space="preserve">
-    <value>Consumables</value>
+    <value>Расходники</value>
   </data>
   <data name="Assets" xml:space="preserve">
-    <value>Assets</value>
+    <value>Ресурсы</value>
   </data>
   <data name="Goods" xml:space="preserve">
-    <value>Goods</value>
+    <value>Товары</value>
   </data>
   <data name="Data" xml:space="preserve">
-    <value>Data</value>
+    <value>Данные</value>
   </data>
   <data name="Manufactured" xml:space="preserve">
-    <value>Manufactured</value>
+    <value>Произведённые</value>
   </data>
   <data name="Raw" xml:space="preserve">
-    <value>Raw</value>
+    <value>Сырьё</value>
   </data>
   <data name="Encoded" xml:space="preserve">
-    <value>Encoded</value>
+    <value>Закодированные</value>
   </data>
   <data name="Time" xml:space="preserve">
-    <value>Time</value>
+    <value>Время</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Тема</value>
   </data>
   <data name="Game_Time" xml:space="preserve">
-    <value>Game Time</value>
+    <value>Игровое время</value>
   </data>
   <data name="UTC" xml:space="preserve">
-    <value>UTC</value>
+    <value>Всемирное время (UTC)</value>
   </data>
   <data name="Local" xml:space="preserve">
-    <value>Local</value>
+    <value>Локальное время</value>
   </data>
   <data name="High_DPI" xml:space="preserve">
-    <value>High DPI</value>
+    <value>Высокое DPI</value>
   </data>
   <data name="Use_Notify_Icon" xml:space="preserve">
-    <value>Use Notify Icon</value>
+    <value>Использовать значок уведомлений</value>
   </data>
   <data name="Minimise_to_Notification_Area" xml:space="preserve">
-    <value>Minimise to Notification Area</value>
+    <value>Сворачивать в область уведомлений</value>
   </data>
   <data name="Start_Minimised" xml:space="preserve">
-    <value>Start Minimised</value>
+    <value>Запускать свернутым</value>
   </data>
   <data name="Screen_Shot_Capture" xml:space="preserve">
-    <value>Screen Shot Capture</value>
+    <value>Снимок экрана</value>
   </data>
   <data name="Remove_DLL_permissions" xml:space="preserve">
-    <value>Remove DLL permissions</value>
+    <value>Удалить разрешения DLL</value>
   </data>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>О программе</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Помощь</value>
   </data>
   <data name="Config" xml:space="preserve">
-    <value>Config</value>
+    <value>Настройки</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>View</value>
+    <value>Вид</value>
   </data>
   <data name="Toggle EDDLite" xml:space="preserve">
-    <value>Toggle EDDLite</value>
+    <value>Переключить EDDLite</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Выход</value>
   </data>
   <data name="Display_Time" xml:space="preserve">
-    <value>Display Time</value>
+    <value>Отображаемое время</value>
   </data>
   <data name="CashCredits" xml:space="preserve">
-    <value>Credits</value>
+    <value>Баланс</value>
   </data>
   <data name="CommanderForm" xml:space="preserve">
-    <value>Commander Settings</value>
+    <value>Настройки командира</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Отмена</value>
   </data>
   <data name="Browse" xml:space="preserve">
-    <value>Browse</value>
+    <value>Обзор</value>
   </data>
 </root>

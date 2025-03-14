@@ -17,6 +17,7 @@ using EliteDangerousCore.DB;
 using EliteDangerousCore.DLL;
 using EliteDangerousCore.EDSM;
 using EliteDangerousCore.ScreenShots;
+using EDDLite.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,8 @@ namespace EDDLite
         public EDDLiteForm()
         {
             InitializeComponent();
+            CreateLanguageMenu();
+            ApplyLocalization();
 
             MaterialCommodityMicroResourceType.Initialise();     // lets statically fill the table way before anyone wants to access it
             ItemData.Initialise();                              // let the item data initialise
@@ -225,6 +228,8 @@ namespace EDDLite
 
             EDDDLLAssemblyFinder.AssemblyFindPaths.Add(EDDOptions.Instance.DLLAppDirectory());      // any needed assemblies from here
             AppDomain.CurrentDomain.AssemblyResolve += EDDDLLAssemblyFinder.AssemblyResolve;
+
+            EDDConfig.Instance.LanguageChanged += ApplyLocalization;
 
             DLLManager = new EDDDLLManager();
 
@@ -1011,5 +1016,59 @@ namespace EDDLite
 
         #endregion
 
+        private void CreateLanguageMenu()
+        {
+            ToolStripMenuItem languageMenu = new ToolStripMenuItem(Resources.Language);
+            ToolStripMenuItem english = new ToolStripMenuItem("English", null, (s, e) => ChangeLanguage("en"));
+            ToolStripMenuItem russian = new ToolStripMenuItem("Русский", null, (s, e) => ChangeLanguage("ru"));
+
+            languageMenu.DropDownItems.Add(english);
+            languageMenu.DropDownItems.Add(russian);
+            menuMain.Items.Add(languageMenu);
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            EDDConfig.Instance.SaveLanguage(lang);
+        }
+
+        private void ApplyLocalization()
+        {
+            configToolStripMenuItem.Text = Properties.Resources.Config;
+            screenShotCaptureToolStripMenuItem.Text = Properties.Resources.Screen_Shot_Capture;
+            displayTimeToolStripMenuItem.Text = Properties.Resources.Time;
+            gameTimeToolStripMenuItem.Text = Properties.Resources.Game_Time;
+            utcToolStripMenuItem.Text = Properties.Resources.UTC;
+            localToolStripMenuItem.Text = Properties.Resources.Local;
+            removeDLLPermissionsToolStripMenuItem.Text = Properties.Resources.Remove_DLL_permissions;
+
+            viewToolStripMenuItem.Text = Properties.Resources.View;
+            themeToolStripMenuItem.Text = Properties.Resources.Theme;
+            highDPIToolStripMenuItem.Text = Properties.Resources.High_DPI;
+            useNotifyIconToolStripMenuItem.Text = Properties.Resources.Use_Notify_Icon;
+            minimiseToNotificationAreaToolStripMenuItem.Text = Properties.Resources.Minimise_to_Notification_Area;
+            startMinimisedToolStripMenuItem.Text = Properties.Resources.Start_Minimised;
+
+            helpToolStripMenuItem.Text = Properties.Resources.Help;
+            aboutToolStripMenuItem.Text = Properties.Resources.About;
+            notifyIconMenu_Open.Text = Properties.Resources.Toggle_EDDLite;
+            notifyIconMenu_Exit.Text = Properties.Resources.Exit;
+
+            labelCmdrH.Text = Properties.Resources.Commander;
+            labelSysH.Text = Properties.Resources.System;
+            labelLocationH.Text = Properties.Resources.Location;
+            labelCashHr.Text = Properties.Resources.CashCredits;
+            labelCargoH.Text = Properties.Resources.Cargo;
+            labelShipH.Text = Properties.Resources.Ship;
+            labelMissionH.Text = Properties.Resources.Missions;
+            labelMRCH.Text = Properties.Resources.Consumables;
+            labelComponentsH.Text = Properties.Resources.Assets;
+            labelItemsH.Text = Properties.Resources.Goods;
+            labelONDH.Text = Properties.Resources.Data;
+            labelManuH.Text = Properties.Resources.Manufactured;
+            labelRawH.Text = Properties.Resources.Raw;
+            labelEncH.Text = Properties.Resources.Encoded;
+            labelGameDateTime.Text = Properties.Resources.Game_Time;
+        }
     }
 }

@@ -12,7 +12,11 @@
  * governing permissions and limitations under the License.
  */
 
+using EliteDangerousCore.DB;
 using System;
+using System.Globalization;
+using System.Threading;
+using EDDLite.Properties;
 
 namespace EDDLite
 {
@@ -22,6 +26,7 @@ namespace EDDLite
 
         private EDDConfig()
         {
+            SetLanguage(UserDatabase.Instance.GetSettingString("Language", "en"));
         }
 
         public static EDDConfig Instance            // Singleton pattern
@@ -36,6 +41,8 @@ namespace EDDLite
                 return instance;
             }
         }
+
+        public event Action LanguageChanged;
 
         #region Discrete Controls
 
@@ -260,6 +267,27 @@ namespace EDDLite
                 language = value;
                 EliteDangerousCore.DB.UserDatabase.Instance.PutSettingString("DefaultLanguage", value);
             }
+        }
+
+        public void SetLanguage(string lang)
+        {
+            if (language != lang)
+            {
+                language = lang;
+                CultureInfo culture = new CultureInfo(lang);
+                Thread.CurrentThread.CurrentUICulture = culture;
+                Thread.CurrentThread.CurrentCulture = culture;
+                Resources.Culture = culture;
+
+                LanguageChanged?.Invoke();
+            }
+        }
+
+
+        public void SaveLanguage(string lang)
+        {
+            UserDatabase.Instance.PutSettingString("Language", lang);
+            SetLanguage(lang);
         }
 
         public string EDSMFullSystemsURL   

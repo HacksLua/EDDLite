@@ -49,7 +49,44 @@ namespace EDDLite
         UserControlSettings_AddC, // Commander name is not valid or duplicate
         UserControlSettings_AddT, // Cannot create Commander
         UserControlSettings_DelCmdr, // delete commander
-        
+
+        Edit,
+        Add,
+        Commander,
+        EDSMName,
+        JournalFolder,
+        Notes,
+        System,
+        Location,
+        Credits,
+        CashCredits,
+        Cargo,
+        Ship,
+        Missions,
+        Consumables,
+        Assets,
+        Goods,
+        Data,
+        Manufactured,
+        Raw,
+        Encoded,
+        Theme,
+        UTC,
+        Local,
+        HighDPI,
+        UseNotifyIcon,
+        MinimiseToNotificationArea,
+        StartMinimised,
+        ScreenShotCapture,
+        RemoveDLLPermissions,
+        Language,
+        About,
+        Help,
+        Config,
+        View,
+        ToggleEDDLite,
+        Exit
+
     }
 
     public static class EDTranslatorExtensions
